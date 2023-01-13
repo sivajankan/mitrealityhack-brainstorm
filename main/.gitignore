@@ -72,3 +72,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 /[Ii]nstallers/*.exe
+main/Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset

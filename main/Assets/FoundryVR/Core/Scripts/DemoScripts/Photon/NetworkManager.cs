@@ -6,6 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 
 using TMPro;
+using UnityEngine.Events;
 
 //SIMPLE PHOTON SCRIPT TO HANDLE ROOMS
 
@@ -15,6 +16,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public int offlineSceneIndex;
     public bool isConnectedToMaster = false;
 
+    public UnityEvent<bool> onConnectToMaster;
     public bool desktopOveride;
 
     private void OnGUI()
@@ -42,6 +44,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         isConnectedToMaster = true;
+        onConnectToMaster.Invoke(isConnectedToMaster);
         Debug.Log("Connected to master!");
     }
 
@@ -73,5 +76,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.LoadLevel(offlineSceneIndex);
         }
+    }
+
+    /// <summary>
+    /// Makes the button visible
+    /// </summary>
+    public void OnMasterConnect()
+    {
+    
     }
 }
