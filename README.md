@@ -2,8 +2,11 @@
 MIT Reality Hack Project: Brainstorm
 
 
-Eden Redman
-Marc Pettersen
-Yuen Wing Kam
-Costas Frost 
-Siva Kansasamy 
+Eden Redman <br />
+Marc Pettersen <br />
+Yuen Wing Kam <br />
+Costas Frost <br />
+Siva Kansasamy <br />
+
+
+<br />
