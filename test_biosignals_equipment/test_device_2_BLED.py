@@ -64,9 +64,9 @@ def main():
     params = BrainFlowInputParams()
     
     try:
-        # params.serial_port = "COM5"
+        params.serial_port = "COM5"
         # params.serial_number = "58C1"
-        board_shim = BoardShim(BoardIds.MUSE_S_BOARD, params)
+        board_shim = BoardShim(BoardIds.MUSE_2_BLED_BOARD, params)
         board_shim.prepare_session()
         board_shim.start_stream(450000)
         Graph(board_shim)
