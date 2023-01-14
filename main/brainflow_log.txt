@@ -1,0 +1,142 @@
+[2023-01-13 18:29:51.874] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:29:51.876] [board_logger] [trace] Board object created 21
+[2023-01-13 18:29:51.880] [board_logger] [debug] Library is loaded
+[2023-01-13 18:29:54.655] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2023-01-13 18:33:25.706] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:33:25.706] [board_logger] [error] Board with id 21 and the same config already exists
+[2023-01-13 18:37:45.511] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:37:45.511] [board_logger] [trace] Board object created 22
+[2023-01-13 18:37:45.512] [board_logger] [debug] Library is loaded
+[2023-01-13 18:38:07.216] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:38:07.216] [board_logger] [trace] Board object created 22
+[2023-01-13 18:38:07.217] [board_logger] [debug] Library is loaded
+[2023-01-13 18:38:11.443] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2023-01-13 18:45:09.710] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:45:09.710] [board_logger] [trace] Board object created 22
+[2023-01-13 18:45:09.711] [board_logger] [debug] Library is loaded
+[2023-01-13 18:45:30.450] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:45:30.450] [board_logger] [trace] Board object created 22
+[2023-01-13 18:45:30.451] [board_logger] [debug] Library is loaded
+[2023-01-13 18:46:06.339] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:46:06.340] [board_logger] [trace] Board object created 22
+[2023-01-13 18:46:06.340] [board_logger] [debug] Library is loaded
+[2023-01-13 18:46:53.119] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:46:53.119] [board_logger] [trace] Board object created 21
+[2023-01-13 18:46:53.120] [board_logger] [debug] Library is loaded
+[2023-01-13 18:47:14.294] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:47:14.295] [board_logger] [trace] Board object created 21
+[2023-01-13 18:47:14.295] [board_logger] [debug] Library is loaded
+[2023-01-13 18:48:39.227] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:48:39.227] [board_logger] [trace] Board object created 22
+[2023-01-13 18:48:39.227] [board_logger] [debug] Library is loaded
+[2023-01-13 18:49:17.076] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:49:17.076] [board_logger] [trace] Board object created 22
+[2023-01-13 18:49:17.077] [board_logger] [debug] Library is loaded
+[2023-01-13 18:49:31.987] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:49:31.987] [board_logger] [trace] Board object created 22
+[2023-01-13 18:49:31.987] [board_logger] [debug] Library is loaded
+[2023-01-13 18:57:55.315] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 18:57:55.315] [board_logger] [trace] Board object created 22
+[2023-01-13 18:57:55.316] [board_logger] [debug] Library is loaded
+[2023-01-13 19:03:30.205] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 19:03:30.205] [board_logger] [trace] Board object created 21
+[2023-01-13 19:03:30.206] [board_logger] [debug] Library is loaded
+[2023-01-13 19:04:03.908] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 19:04:03.908] [board_logger] [trace] Board object created 22
+[2023-01-13 19:04:03.909] [board_logger] [debug] Library is loaded
+[2023-01-13 19:05:13.215] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 19:05:13.215] [board_logger] [trace] Board object created 22
+[2023-01-13 19:05:13.216] [board_logger] [debug] Library is loaded
+[2023-01-13 19:07:44.144] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 19:07:44.144] [board_logger] [trace] Board object created 21
+[2023-01-13 19:07:44.145] [board_logger] [debug] Library is loaded
+[2023-01-13 19:08:20.192] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2023-01-13 19:08:20.192] [board_logger] [trace] Board object created 22
+[2023-01-13 19:08:20.193] [board_logger] [debug] Library is loaded
+[2023-01-13 19:12:56.715] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-01-13 19:12:56.715] [board_logger] [trace] Board object created -1
+[2023-01-13 19:12:56.716] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2023-01-13 19:22:49.486] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"58C1","serial_port":"COM5","timeout":0}
+[2023-01-13 19:22:49.486] [board_logger] [trace] Board object created 21
+[2023-01-13 19:22:49.489] [board_logger] [debug] Library is loaded
+[2023-01-13 19:24:36.687] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"58C1","serial_port":"COM5","timeout":10}
+[2023-01-13 19:24:36.687] [board_logger] [trace] Board object created 21
+[2023-01-13 19:24:36.688] [board_logger] [debug] Library is loaded
+[2023-01-13 19:28:07.778] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"80E2","serial_port":"COM5","timeout":10}
+[2023-01-13 19:28:07.778] [board_logger] [trace] Board object created 22
+[2023-01-13 19:28:07.779] [board_logger] [debug] Library is loaded
+[2023-01-13 19:28:45.584] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"80E2","serial_port":"COM5","timeout":0}
+[2023-01-13 19:28:45.584] [board_logger] [trace] Board object created 22
+[2023-01-13 19:28:45.585] [board_logger] [debug] Library is loaded
+[2023-01-13 19:30:31.883] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"80E2","serial_port":"COM5","timeout":0}
+[2023-01-13 19:30:31.883] [board_logger] [trace] Board object created 22
+[2023-01-13 19:30:31.884] [board_logger] [debug] Library is loaded
+[2023-01-13 19:31:03.368] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"80E2","serial_port":"COM5","timeout":10}
+[2023-01-13 19:31:03.368] [board_logger] [trace] Board object created 22
+[2023-01-13 19:31:03.369] [board_logger] [debug] Library is loaded
+[2023-01-13 19:34:37.620] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:34:37.620] [board_logger] [trace] Board object created 22
+[2023-01-13 19:34:37.621] [board_logger] [debug] Library is loaded
+[2023-01-13 19:36:19.180] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:36:19.180] [board_logger] [trace] Board object created 21
+[2023-01-13 19:36:19.181] [board_logger] [debug] Library is loaded
+[2023-01-13 19:36:23.119] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2023-01-13 19:37:33.338] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:37:33.338] [board_logger] [trace] Board object created 22
+[2023-01-13 19:37:33.339] [board_logger] [debug] Library is loaded
+[2023-01-13 19:37:45.689] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:37:45.689] [board_logger] [trace] Board object created 22
+[2023-01-13 19:37:45.690] [board_logger] [debug] Library is loaded
+[2023-01-13 19:37:48.479] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2023-01-13 19:48:36.232] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"58C1","serial_port":"COM5","timeout":5}
+[2023-01-13 19:48:36.232] [board_logger] [trace] Board object created 22
+[2023-01-13 19:48:36.233] [board_logger] [debug] Library is loaded
+[2023-01-13 19:49:11.730] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:49:11.730] [board_logger] [trace] Board object created 22
+[2023-01-13 19:49:11.731] [board_logger] [debug] Library is loaded
+[2023-01-13 19:49:37.489] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:49:37.490] [board_logger] [trace] Board object created 22
+[2023-01-13 19:49:37.490] [board_logger] [debug] Library is loaded
+[2023-01-13 19:49:56.032] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:49:56.032] [board_logger] [trace] Board object created 22
+[2023-01-13 19:49:56.032] [board_logger] [debug] Library is loaded
+[2023-01-13 19:50:27.417] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:50:27.417] [board_logger] [trace] Board object created 21
+[2023-01-13 19:50:27.417] [board_logger] [debug] Library is loaded
+[2023-01-13 19:51:11.244] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:51:11.244] [board_logger] [trace] Board object created 21
+[2023-01-13 19:51:11.245] [board_logger] [debug] Library is loaded
+[2023-01-13 19:51:17.395] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2023-01-13 19:51:41.852] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:51:41.852] [board_logger] [trace] Board object created 21
+[2023-01-13 19:51:41.853] [board_logger] [debug] Library is loaded
+[2023-01-13 19:51:59.117] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:51:59.118] [board_logger] [trace] Board object created 21
+[2023-01-13 19:51:59.118] [board_logger] [debug] Library is loaded
+[2023-01-13 19:52:02.077] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2023-01-13 19:53:03.611] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:53:03.611] [board_logger] [trace] Board object created 21
+[2023-01-13 19:53:03.612] [board_logger] [debug] Library is loaded
+[2023-01-13 19:53:06.625] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2023-01-13 19:53:33.534] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"58C1","serial_port":"COM5","timeout":5}
+[2023-01-13 19:53:33.534] [board_logger] [trace] Board object created 22
+[2023-01-13 19:53:33.535] [board_logger] [debug] Library is loaded
+[2023-01-13 19:54:55.737] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"58C1","serial_port":"COM5","timeout":5}
+[2023-01-13 19:54:55.737] [board_logger] [trace] Board object created 22
+[2023-01-13 19:54:55.738] [board_logger] [debug] Library is loaded
+[2023-01-13 19:55:09.412] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"58C1","serial_port":"COM5","timeout":5}
+[2023-01-13 19:55:09.412] [board_logger] [trace] Board object created 22
+[2023-01-13 19:55:09.413] [board_logger] [debug] Library is loaded
+[2023-01-13 19:55:21.258] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"58C1","serial_port":"COM5","timeout":5}
+[2023-01-13 19:55:21.258] [board_logger] [trace] Board object created 22
+[2023-01-13 19:55:21.259] [board_logger] [debug] Library is loaded
+[2023-01-13 19:56:02.857] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"58C1","serial_port":"COM5","timeout":5}
+[2023-01-13 19:56:02.857] [board_logger] [trace] Board object created 22
+[2023-01-13 19:56:02.858] [board_logger] [debug] Library is loaded
+[2023-01-13 19:56:36.682] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:56:36.682] [board_logger] [trace] Board object created 22
+[2023-01-13 19:56:36.683] [board_logger] [debug] Library is loaded
+[2023-01-13 19:57:09.416] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"COM5","timeout":5}
+[2023-01-13 19:57:09.416] [board_logger] [trace] Board object created 21
+[2023-01-13 19:57:09.417] [board_logger] [debug] Library is loaded
+[2023-01-13 19:57:12.610] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
