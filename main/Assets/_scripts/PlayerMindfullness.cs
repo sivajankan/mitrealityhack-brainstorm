@@ -20,6 +20,8 @@ namespace Foundry
 
         void Start()
         {
+            this.photonView.ObservedComponents.Add(this);
+
             incrementButton.action.performed += Increment;
             decrementButton.action.performed += Decrement;
         }
