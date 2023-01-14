@@ -65,7 +65,8 @@ def main():
     
     try:
         params.serial_port = "COM5"
-        # params.serial_number = "58C1"
+        # params.serial_number = "80E2";
+        params.timeout = 5;
         board_shim = BoardShim(BoardIds.MUSE_2_BLED_BOARD, params)
         board_shim.prepare_session()
         board_shim.start_stream(450000)
