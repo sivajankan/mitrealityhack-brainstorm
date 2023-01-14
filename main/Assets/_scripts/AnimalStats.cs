@@ -2,43 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Photon.Pun;
 
 namespace Foundry
 {
-    public class AnimalStats : MonoBehaviour
+    public class AnimalStats : MonoBehaviourPunCallbacks, IPunObservable
     {
-        // what do we do here? we need a global singleton
-        PlayerManagers managers;
+        public float deteriateRate = 0.01f;
+        private float mindfullness = 0.5f;
+
+        public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+        {
+            if (stream.IsWriting)
+            {
+                stream.SendNext(mindfullness);
+            }
+            else
+            {
+                mindfullness = (float)stream.ReceiveNext();
+            }
+        }
 
         // Start is called before the first frame update
         void Start()
         {
-            managers = PlayerManagers.Instance;
+            this.photonView.ObservedComponents.Add(this);
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (managers.players?.Count > 0)
-            {
-                // so here we are getting the distance between player and animals
-                foreach (var v in managers.players.Values.ToArray())
-                {
-                    var playerPos = v.transform.position;
-                    var animalPos = transform.position;
+            // do something ...
 
-                    playerPos.y = 0;
-                    animalPos.y = 0;
-                    var distanceAway = Vector3.Distance(playerPos, animalPos);
-                    var stats = v.GetComponent<PlayerMindfullness>();
-                    var mindfullness = stats.mindfullness;
-                    var restlessness = stats.restlessness;
-
-                    // TODO: Do our compute here
-                    Debug.Log($"transform {transform}, distance away {distanceAway}");
-                    Debug.Log($"mind: {mindfullness} | rest: {restlessness}");
-                };
-            }
+            this.mindfullness -= this.deteriateRate * Time.deltaTime;
         }
     }
 }
