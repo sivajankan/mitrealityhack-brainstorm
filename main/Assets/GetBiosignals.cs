@@ -13,17 +13,22 @@ namespace Foundry
     {
         private BoardShim board_shim = null;
         private int sampling_rate = 0;
+        private int sampling_rate_ppg = 0;
         private double[] filtered;
         private int[] eeg_channels = null;
         private int[] ppg_channels = null;
-        private MLModel mindfulness = null;
-        private MLModel restfulness = null;
+        // private MLModel mindfulness = null;
+        // private MLModel restfulness = null;
 
+        // private bool PPG = true;
         private bool PPG = true;
+        private double[] mf_coef = {2.6338144674136394,4.006742906593334,-34.51389221061297,1.1950604401540308,35.78022137767881};
+        private double mindfulness_intercept = 0.364078;
+        public double mindfulness;
 
         // private int board_id = (int)BoardIds.SYNTHETIC_BOARD;
-        private int board_id = (int)BoardIds.MUSE_S_BLED_BOARD; // is actually the MUSE 2 - they  mislabelled them internally
-        // private int board_id = (int)BoardIds.MUSE_2_BLED_BOARD; // is actually the MUSE S - they  mislabelled them internally
+        // private int board_id = (int)BoardIds.MUSE_S_BLED_BOARD; // is actually the MUSE 2 - they  mislabelled them internally
+        private int board_id = (int)BoardIds.MUSE_2_BLED_BOARD; // is actually the MUSE S - they  mislabelled them internally
 
         // Start is called before the first frame update
         void Start()
@@ -49,20 +54,21 @@ namespace Foundry
 
                 board_shim.start_stream(450000, "file://brainflow_data.csv:w");
                 sampling_rate = BoardShim.get_sampling_rate(board_id);
+                sampling_rate_ppg = BoardShim.get_sampling_rate(board_id, (int)BrainFlowPresets.ANCILLARY_PRESET);
                 eeg_channels = BoardShim.get_eeg_channels(board_id);
                 ppg_channels = BoardShim.get_ppg_channels(board_id, (int)BrainFlowPresets.ANCILLARY_PRESET);
                 
                 Debug.Log("Brainflow streaming was started");
 
-                // MINDFULNESS= 0, DEAFULT MODEL = 0
-                BrainFlowModelParams mindfulness_params = new BrainFlowModelParams(0, 0);
-                MLModel mindfulness = new MLModel(mindfulness_params);
-                mindfulness.prepare();
+                // // MINDFULNESS= 0, DEAFULT MODEL = 0
+                // BrainFlowModelParams mindfulness_params = new BrainFlowModelParams((int)BrainFlowMetrics.MINDFULNESS, (int)BrainFlowClassifiers.DEFAULT_CLASSIFIER);
+                // MLModel mindfulness = new MLModel(mindfulness_params);
+                // mindfulness.prepare();
 
-                // // RESTFULNESS= 1, DEAFULT MODEL = 0
-                BrainFlowModelParams restfulness_params = new BrainFlowModelParams(0, 0);
-                MLModel restfulness = new MLModel(restfulness_params);
-                restfulness.prepare();
+                // // // RESTFULNESS= 1, DEAFULT MODEL = 0
+                // BrainFlowModelParams restfulness_params = new BrainFlowModelParams((int)BrainFlowMetrics.RESTFULNESS, (int)BrainFlowClassifiers.DEFAULT_CLASSIFIER);
+                // MLModel restfulness = new MLModel(restfulness_params);
+                // restfulness.prepare();
             }
             catch (BrainFlowError e)
             {
@@ -79,68 +85,87 @@ namespace Foundry
                 return;
             }
 
-            int number_of_data_points = sampling_rate * 4;
-            double[,] unprocessed_data = board_shim.get_current_board_data(number_of_data_points);
+            int number_of_data_points = sampling_rate * 6;
+            double[,] data = board_shim.get_current_board_data(number_of_data_points);
             
             // Debug.Log("<------------- EEG ---------->");
 
-            // actually prints cols
-            Debug.Log("Num eeg elements rows: " + unprocessed_data.GetLength(1));
-            Debug.Log("rows: ");
-            Debug.Log(String.Join(",", GetRow(unprocessed_data,1)));
+            // // actually prints cols
+            // Debug.Log("Num eeg elements rows: " + unprocessed_data.GetLength(1));
+            // Debug.Log($"rows: {String.Join(",", GetRow(unprocessed_data,1))}");
 
-            // actually prints rows
-            Debug.Log("Num eeg elements cols: " + unprocessed_data.GetLength(0));
-            Debug.Log("cols: ");
-            Debug.Log(String.Join(",", GetCol(unprocessed_data,1)));
+            // // actually prints rows
+            // Debug.Log("Num eeg elements cols: " + unprocessed_data.GetLength(0));
+            // Debug.Log($"cols: {String.Join(",", GetCol(unprocessed_data,1))}");
 
-            if (unprocessed_data.GetRow(0).Length < number_of_data_points)
+            if (data.GetRow(0).Length < number_of_data_points)
             {
                 return; // wait for more data
             }
 
             if (PPG) 
             {
-                // double[,] data_anc = board_shim.get_current_board_data(number_of_data_points, (int)BrainFlowPresets.ANCILLARY_PRESET);
-                double[,] data_anc = board_shim.get_current_board_data(number_of_data_points, (int)2);
+                double[,] data_anc = board_shim.get_current_board_data(number_of_data_points, (int)BrainFlowPresets.ANCILLARY_PRESET);
 
-                Debug.Log(String.Join(",", ppg_channels));
+                if (data_anc.GetRow(0).Length < number_of_data_points)
+                {
+                    Debug.Log($"Length of PPG: {data_anc.GetRow(0).Length}");
+                    return; // wait for more data
+                }
 
                 Debug.Log("<------------- PPG ---------->");
+                // Debug.Log(String.Join(",", ppg_channels));
 
-                // for whatever reason - can't seem to get to print out - but I know there are channels and data!
+                // Prints cols
+                // Debug.Log("Num ppg elements in a col: " + data_anc.GetLength(1));
 
-                // actually prints cols
-                Debug.Log("Num ppg elements rows: " + data_anc.GetLength(1));
-                Debug.Log("rows: ");
-                Debug.Log(String.Join(",", GetRow(data_anc,1)));
+                // // Prints rows
+                // Debug.Log("Num ppg elements in a row: " + data_anc.GetLength(0));
+                // Debug.Log($"row: {String.Join(",", GetCol(data_anc,1))}");
 
-                // // actually prints rows
-                Debug.Log("Num ppg elements cols: " + data_anc.GetLength(0));
-                Debug.Log("cols: ");
-                Debug.Log(String.Join(",", GetCol(data_anc,1)));
-                    
-                double heart_rate = DataFilter.get_heart_rate (data_anc.GetRow(ppg_channels[1]), data_anc.GetRow(ppg_channels[2]), sampling_rate, (int)8192);
-                Debug.Log("Heart Rate: " + heart_rate.ToString("F4"));
+                double heart_rate = 0f;
+                try
+                {
+                    heart_rate = DataFilter.get_heart_rate (data_anc.GetRow(ppg_channels[1]), data_anc.GetRow(ppg_channels[0]), sampling_rate_ppg, (int)1024);//(int)8192);
+                    Debug.Log($"Heart rate: {heart_rate}");
+                }
+                catch (System.Exception e)
+                {
+                    Debug.Log($"ERROR {String.Join(",", data_anc.GetRow(ppg_channels[1]))} {String.Join(",", data_anc.GetRow(ppg_channels[0]))}");
+                    // Debug.Log($"Length of ppg_ir: {data_anc.GetRow(ppg_channels[1]).GetLength(0)}");
+                    // Debug.Log($"Length of ppg_red: {data_anc.GetRow(ppg_channels[2]).GetLength(0)}");
+                    throw e;
+                }                
+                Debug.Log("Heart Rate: " + heart_rate);
 
-                double oxygen_level = DataFilter.get_oxygen_level (data_anc.GetRow(ppg_channels[1]), data_anc.GetRow(ppg_channels[2]), sampling_rate);
-                Debug.Log("Oxygen Level: ");
-                Debug.Log(heart_rate);
+                // double oxygen_level = DataFilter.get_oxygen_level (data_anc.GetRow(ppg_channels[1]), data_anc.GetRow(ppg_channels[2]), sampling_rate);
+                // Debug.Log("Oxygen Level: ");
+                // Debug.Log(heart_rate);
             }
 
-            for (int i = 0; i < eeg_channels.Length; i++)
-            {
-                filtered = DataFilter.perform_wavelet_denoising (unprocessed_data.GetRow(eeg_channels[i]), (int)WaveletTypes.BIOR3_9, 3);
-                // Debug.Log("channel " + eeg_channels[i] + " = " + filtered[i].ToString());
-            }
+            // double[,] filtered_data = data;
+
+            // for (int i = 0; i < eeg_channels.Length; i++)
+            // {
+            //     filtered_chan = DataFilter.perform_wavelet_denoising (data.GetRow(eeg_channels[i]), (int)WaveletTypes.BIOR3_9, 3);
+            //     // Debug.Log("channel " + eeg_channels[i] + " = " + filtered[i].ToString());
+            // }
 
             // prepare feature vector
-            Tuple<double[], double[]> bands = DataFilter.get_avg_band_powers (unprocessed_data, eeg_channels, sampling_rate, true);
-            // Tuple<double[], double[]> bands = DataFilter.get_avg_band_powers (filtered, eeg_channels, sampling_rate, true);
+            Tuple<double[], double[]> bands = DataFilter.get_avg_band_powers(data, eeg_channels, sampling_rate, true);
+            Debug.Log($"bands.Item1: {String.Join(",", bands.Item1)}");
             
-            double[] feature_vector = bands.Item1.Concatenate (bands.Item2);
-            Debug.Log("Mindfulness: " + mindfulness.predict(feature_vector)); // calc and print mindfulness level
+            double[] feature_vector = bands.Item1;
 
+            double value = 0.0;
+            
+            for (int i = 0; i < 5; i++)
+            {
+                value += feature_vector[i] * mf_coef[i];
+            }
+            mindfulness = 1.0 / (1.0 + Mathf.Exp((float)-1.0*((float)mindfulness_intercept + (float)value)));
+
+            Debug.Log("Mindfulness: " + mindfulness); // print mindfulness level
         }
 
         // you need to call release_session and ensure that all resources correctly released
