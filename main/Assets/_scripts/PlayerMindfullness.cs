@@ -9,21 +9,18 @@ namespace Foundry
 {
     public class PlayerMindfullness : MonoBehaviourPunCallbacks, IPunObservable
     {
-
         // FOR DEBUG PURPOSE
-        public InputActionReference incrementButton;
-        public InputActionReference decrementButton;
-        public float deltaRange = 0.1f;
-        public UnityEvent<string> onValueChange;
+        //public InputActionReference incrementButton;
+        //public InputActionReference decrementButton;
+        //public float deltaRange = 0.1f;
+        //public UnityEvent<string> onValueChange;
 
         public float mindfullness = 0f;
+        public float restlessness = 0f;
 
         void Start()
         {
             this.photonView.ObservedComponents.Add(this);
-
-            incrementButton.action.performed += Increment;
-            decrementButton.action.performed += Decrement;
         }
 
         public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -31,29 +28,31 @@ namespace Foundry
             if (stream.IsWriting)
             {
                 stream.SendNext(mindfullness);
+                stream.SendNext(restlessness);
             }
             else
             {
                 mindfullness = (float)stream.ReceiveNext();
+                restlessness = (float)stream.ReceiveNext();
             }
         }
 
-        public void Increment(InputAction.CallbackContext ctx)
-        {
-            Debug.Log("increase");
-            var val = mindfullness + deltaRange;
+        //public void Increment(InputAction.CallbackContext ctx)
+        //{
+        //    Debug.Log("increase");
+        //    var val = mindfullness + deltaRange;
       
-            mindfullness = val;
-            onValueChange.Invoke(mindfullness.ToString());
-        }
+        //    mindfullness = val;
+        //    onValueChange.Invoke(mindfullness.ToString());
+        //}
 
-        public void Decrement(InputAction.CallbackContext ctx)
-        {
-            Debug.Log("increase");
-            var val = mindfullness - deltaRange;
+        //public void Decrement(InputAction.CallbackContext ctx)
+        //{
+        //    Debug.Log("increase");
+        //    var val = mindfullness - deltaRange;
 
-            mindfullness = val;
-            onValueChange.Invoke(mindfullness.ToString());
-        }
+        //    mindfullness = val;
+        //    onValueChange.Invoke(mindfullness.ToString());
+        //}
     }
 }
