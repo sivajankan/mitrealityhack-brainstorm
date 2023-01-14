@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Whiteboard
   - PlayerHand
+  - Wall
   layers:
   - Default
   - TransparentFX
