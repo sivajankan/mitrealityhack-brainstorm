@@ -6,6 +6,7 @@ using System.Linq;
 
 using brainflow;
 using brainflow.math;
+using UnityEngine.Events;
 
 namespace Foundry
 {
@@ -24,6 +25,8 @@ namespace Foundry
         private bool PPG = true;
         private double[] mf_coef = {2.6338144674136394,4.006742906593334,-34.51389221061297,1.1950604401540308,35.78022137767881};
         private double mindfulness_intercept = 0.364078;
+        
+        public UnityEvent <double> onMindfulnessChange;
         public double mindfulness;
 
         // private int board_id = (int)BoardIds.SYNTHETIC_BOARD;
@@ -109,11 +112,11 @@ namespace Foundry
 
                 if (data_anc.GetRow(0).Length < number_of_data_points)
                 {
-                    Debug.Log($"Length of PPG: {data_anc.GetRow(0).Length}");
+                    Debug.Log($"Length of PPG: {data_anc.GetRow(0).Length} - waiting for more data");
                     return; // wait for more data
                 }
 
-                Debug.Log("<------------- PPG ---------->");
+                // Debug.Log("<------------- PPG ---------->");
                 // Debug.Log(String.Join(",", ppg_channels));
 
                 // Prints cols
@@ -164,6 +167,7 @@ namespace Foundry
                 value += feature_vector[i] * mf_coef[i];
             }
             mindfulness = 1.0 / (1.0 + Mathf.Exp((float)-1.0*((float)mindfulness_intercept + (float)value)));
+            onMindfulnessChange.Invoke(mindfulness);
 
             Debug.Log("Mindfulness: " + mindfulness); // print mindfulness level
         }
