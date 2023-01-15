@@ -9,6 +9,7 @@ namespace Foundry
     {
         public InputAction inputAction;
         public float activationValue;
+        public Transform firingPoint;
 
         void Start()
         {
@@ -27,6 +28,13 @@ namespace Foundry
         public void Fire()
         {
             Debug.Log("FIRE!");
+            var ray = new Ray(transform.position, firingPoint.up);
+            RaycastHit hitData;
+            if (Physics.Raycast(ray, out hitData))
+            {
+                // 80 X // 0.2 Z
+
+            }
         }
     }
 }
