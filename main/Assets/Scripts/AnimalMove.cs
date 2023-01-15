@@ -36,6 +36,13 @@ namespace Foundry
             loop();
         }
 
+        public void transition(float poll, float timePass)
+        {
+            this.isRun = false;
+            this.poll = poll;
+            this.timePass = timePass;
+        }
+
         void loop()
         {
             timePass += Time.deltaTime;
