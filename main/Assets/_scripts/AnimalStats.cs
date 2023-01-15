@@ -23,6 +23,10 @@ namespace Foundry
             }
         }
 
+        public void OnAnimalHit(float mindfullness){
+            this.mindfullness = mindfullness;
+        }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -33,8 +37,11 @@ namespace Foundry
         void Update()
         {
             // do something ...
-
-            this.mindfullness -= this.deteriateRate * Time.deltaTime;
+            if (this.mindfullness > 0.5){
+                this.mindfullness -= this.deteriateRate * Time.deltaTime;
+            } else {
+                this.mindfullness += this.deteriateRate * Time.deltaTime;
+            }
         }
     }
 }

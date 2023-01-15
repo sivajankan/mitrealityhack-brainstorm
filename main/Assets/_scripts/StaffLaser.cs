@@ -10,6 +10,7 @@ namespace Foundry
         public InputAction inputAction;
         public float activationValue;
         public Transform firingPoint;
+        public PlayerMindfullness mindfullness;
 
         void Start()
         {
@@ -33,6 +34,7 @@ namespace Foundry
             if (Physics.Raycast(ray, out hitData))
             {
                 // 80 X // 0.2 Z
+                hitData.transform.GetComponent<AnimalStats>().OnAnimalHit(mindfullness.mindfullness);
 
             }
         }
