@@ -11,10 +11,12 @@ namespace Foundry
         public float deteriateRate = 0.01f;
         public float mindfullness = 0.5f;
         public AnimalMove move;
+        public AudioSource audioSource;
 
         public void start()
         {
-            this.move = this.GetComponent<AnimalMove>();
+            //this.move = this.GetComponent<AnimalMove>();
+            //this.audioSource = this.GetComponent<AudioSource>();
         }
 
         public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -32,6 +34,7 @@ namespace Foundry
         public void OnAnimalHit(float mindfullness){
             this.mindfullness = mindfullness;
             this.move.transition(1.5f, 0f);
+            this.audioSource.Play();
         }
 
         // Start is called before the first frame update
