@@ -2394,24 +2394,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d47c0efe7125940a2c134088869b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  incrementButton: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  decrementButton: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  deltaRange: 0.1
-  onValueChange:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 601329628521932175}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   mindfullness: 0
 --- !u!1 &2101046762834117021
 GameObject:
