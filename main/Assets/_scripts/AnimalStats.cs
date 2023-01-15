@@ -9,7 +9,7 @@ namespace Foundry
     public class AnimalStats : MonoBehaviourPunCallbacks, IPunObservable
     {
         public float deteriateRate = 0.01f;
-        private float mindfullness = 0.5f;
+        public float mindfullness = 0.5f;
 
         public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
         {
