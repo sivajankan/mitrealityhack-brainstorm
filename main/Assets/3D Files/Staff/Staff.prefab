@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4568194946056521748}
   - component: {fileID: 590320056707548970}
+  - component: {fileID: 289142658811960513}
   m_Layer: 0
   m_Name: Crystal
   m_TagString: Untagged
@@ -85,6 +86,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.02859664, y: 1.1282783, z: 0.08255571}
     m_Extent: {x: 1.0930929, y: 2.259162, z: 1.0667901}
   m_DirtyAABB: 0
+--- !u!114 &289142658811960513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7020280826370644801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad5e9da730ef7e42aca766abd399b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brainInput: 0.55
+  blendSpeed: 3
 --- !u!1 &7935519067844398084
 GameObject:
   m_ObjectHideFlags: 0
