@@ -10,6 +10,7 @@ namespace Foundry
         private int blendShapeIndex;
         public float brainInput;
         public float blendSpeed;
+        public bool isInverse;
 
         private float brainInputRemaped;
 
@@ -55,14 +56,14 @@ namespace Foundry
             //if the float input is less than .5 blend index is 1
             if (input < .5f)
             {
-                SetBlendIndex(0);
-                _skinnedMeshRenderer.SetBlendShapeWeight(1, 0);
+                SetBlendIndex(isInverse ? 1 : 0);
+                _skinnedMeshRenderer.SetBlendShapeWeight(isInverse ? 0 : 1, 0);
             }
             //if the float input is greater than .5 blend index is 0
             else if (input > .5f)
             {
-                SetBlendIndex(1);
-                _skinnedMeshRenderer.SetBlendShapeWeight(0, 0);
+                SetBlendIndex(isInverse ? 0 : 1);
+                _skinnedMeshRenderer.SetBlendShapeWeight(isInverse ? 1 : 0, 0);
             }
 
         }
@@ -75,7 +76,7 @@ namespace Foundry
             //If the input is bigger than 0.5 then you want 0 to 100 based off of 1-0.5
             if (input > .5f)
             {
-                brainInputRemaped = (input - .5f) * 200f;
+                brainInputRemaped = (input - .5f) * 100f;
             }
 
             //If the input is less than 0.5 then you want 0 to 100 based off of 0.5-0

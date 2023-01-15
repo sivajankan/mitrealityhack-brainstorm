@@ -100,3 +100,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brainInput: 0.4
   blendSpeed: 3
+  isInverse: 1
