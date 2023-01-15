@@ -31,11 +31,18 @@ namespace Foundry
             Debug.Log("FIRE!");
             var ray = new Ray(transform.position, firingPoint.up);
             RaycastHit hitData;
-            if (Physics.Raycast(ray, out hitData))
+            if (Physics.SphereCast(ray, 1, out hitData))
             {
                 // 80 X // 0.2 Z
-                hitData.transform.GetComponent<AnimalStats>().OnAnimalHit(mindfullness.mindfullness);
-
+                Debug.Log("HIT SOMETHING");
+                try
+                {
+                    hitData.transform.GetComponent<AnimalStats>().OnAnimalHit(mindfullness.mindfullness);
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogError("OH NO!" + e.Message);
+                }
             }
         }
     }

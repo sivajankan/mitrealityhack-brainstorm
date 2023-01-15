@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
 using Photon.Pun;
 
 namespace Foundry
@@ -37,9 +37,12 @@ namespace Foundry
         void Update()
         {
             // do something ...
-            if (this.mindfullness > 0.5){
+            if (this.mindfullness > 0.5)
+            {
                 this.mindfullness -= this.deteriateRate * Time.deltaTime;
-            } else {
+            }
+            else
+            {
                 this.mindfullness += this.deteriateRate * Time.deltaTime;
             }
         }
