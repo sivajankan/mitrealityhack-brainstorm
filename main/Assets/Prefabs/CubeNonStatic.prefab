@@ -359,8 +359,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: BunnyTwo
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 594595553324046838, guid: 389fca3f241f0b14286762c383ee6fdd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 389fca3f241f0b14286762c383ee6fdd, type: 3}
+--- !u!1 &3913651840284126215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7861681452032195217, guid: 389fca3f241f0b14286762c383ee6fdd, type: 3}
+  m_PrefabInstance: {fileID: 6578167227681838742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2961578204353155070
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3913651840284126215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: beb9f2956a0ab0f45ba5ba28d33db693, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!4 &4403329877479012029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7372846740771676203, guid: 389fca3f241f0b14286762c383ee6fdd, type: 3}
