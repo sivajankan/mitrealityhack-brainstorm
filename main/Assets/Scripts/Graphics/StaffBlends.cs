@@ -75,7 +75,7 @@ namespace Foundry
             //If the input is bigger than 0.5 then you want 0 to 100 based off of 1-0.5
             if (input > .5f)
             {
-                brainInputRemaped = (input - .5f) * 100f;
+                brainInputRemaped = (input - .5f) * 200f;
             }
 
             //If the input is less than 0.5 then you want 0 to 100 based off of 0.5-0
