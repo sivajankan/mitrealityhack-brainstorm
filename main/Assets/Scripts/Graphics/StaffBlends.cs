@@ -44,6 +44,11 @@ namespace Foundry
             blendShapeIndex = index;
         }
 
+        public void SetBrainInput(float input)
+        {
+            this.brainInput = input;
+        }
+
         //Adjust blend shape value based on float input value (0-1) where .5 is the default value
         public void AdjustBlendIndex(float input)
         {

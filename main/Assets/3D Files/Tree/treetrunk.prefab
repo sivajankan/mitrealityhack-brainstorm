@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3316357904340335879}
   - component: {fileID: 1849231653701726882}
   - component: {fileID: 4489311670671001192}
+  - component: {fileID: 3421241167209588078}
   m_Layer: 0
   m_Name: treetrunk
   m_TagString: Untagged
@@ -87,6 +88,71 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3421241167209588078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688017161795135421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ee557c9a6155d46baf1de6515fdc8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMindfulnessChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4110912234231397888}
+        m_TargetAssemblyTypeName: Foundry.StaffBlends, Assembly-CSharp
+        m_MethodName: SetBrainInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7185973111716949363}
+        m_TargetAssemblyTypeName: Foundry.StaffBlends, Assembly-CSharp
+        m_MethodName: SetBrainInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7488464721568351658}
+        m_TargetAssemblyTypeName: Foundry.StaffBlends, Assembly-CSharp
+        m_MethodName: SetBrainInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4572140846803351738}
+        m_TargetAssemblyTypeName: Foundry.StaffBlends, Assembly-CSharp
+        m_MethodName: SetBrainInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dropOffStart: 1
+  dropOffEnd: 3
 --- !u!1001 &1801078392792503174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,6 +227,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 177311269911974966, guid: 90a83e7a937999d4bb3f7c41bd927932, type: 3}
   m_PrefabInstance: {fileID: 1801078392792503174}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4572140846803351738 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2849994205584108348, guid: 90a83e7a937999d4bb3f7c41bd927932, type: 3}
+  m_PrefabInstance: {fileID: 1801078392792503174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad5e9da730ef7e42aca766abd399b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2198269286054122812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -235,6 +312,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 177311269911974966, guid: 90a83e7a937999d4bb3f7c41bd927932, type: 3}
   m_PrefabInstance: {fileID: 2198269286054122812}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4110912234231397888 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2849994205584108348, guid: 90a83e7a937999d4bb3f7c41bd927932, type: 3}
+  m_PrefabInstance: {fileID: 2198269286054122812}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad5e9da730ef7e42aca766abd399b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4639103836888460950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -309,6 +397,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 177311269911974966, guid: 90a83e7a937999d4bb3f7c41bd927932, type: 3}
   m_PrefabInstance: {fileID: 4639103836888460950}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7488464721568351658 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2849994205584108348, guid: 90a83e7a937999d4bb3f7c41bd927932, type: 3}
+  m_PrefabInstance: {fileID: 4639103836888460950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad5e9da730ef7e42aca766abd399b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4914696964750607951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -383,3 +482,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 177311269911974966, guid: 90a83e7a937999d4bb3f7c41bd927932, type: 3}
   m_PrefabInstance: {fileID: 4914696964750607951}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7185973111716949363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2849994205584108348, guid: 90a83e7a937999d4bb3f7c41bd927932, type: 3}
+  m_PrefabInstance: {fileID: 4914696964750607951}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad5e9da730ef7e42aca766abd399b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
