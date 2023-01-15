@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ee557c9a6155d46baf1de6515fdc8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mindfullness: 0.5
   onMindfulnessChange:
     m_PersistentCalls:
       m_Calls:
@@ -151,8 +152,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  dropOffStart: 1
-  dropOffEnd: 3
+  dropOffStart: 3
+  dropOffEnd: 10
 --- !u!1001 &1801078392792503174
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2020,6 +2020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7676b8803154cd40902bff079abd1d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  live: 0
   onMindfulnessChange:
     m_PersistentCalls:
       m_Calls: []

@@ -2395,6 +2395,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mindfullness: 0
+  onMindfulnessChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8405742751094537042}
+        m_TargetAssemblyTypeName: Foundry.StaffBlends, Assembly-CSharp
+        m_MethodName: SetBrainInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2101046762834117021
 GameObject:
   m_ObjectHideFlags: 0
@@ -11546,3 +11561,14 @@ MonoBehaviour:
   activationValue: 1
   firingPoint: {fileID: 8394397437109162795}
   mindfullness: {fileID: 6739857595280900717}
+--- !u!114 &8405742751094537042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 289142658811960513, guid: cbde21d8a13d4194892be29f827ff35e, type: 3}
+  m_PrefabInstance: {fileID: 8116629782171215763}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad5e9da730ef7e42aca766abd399b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

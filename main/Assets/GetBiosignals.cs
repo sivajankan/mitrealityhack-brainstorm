@@ -22,7 +22,7 @@ namespace Foundry
         // private MLModel mindfulness = null;
         // private MLModel restfulness = null;
 
-        private bool live = true;
+        public bool live = false;
         private bool PPG = false;
         // private bool PPG = true;
         private double[] mf_coef = {2.6338144674136394,4.006742906593334,-34.51389221061297,1.1950604401540308,35.78022137767881};
@@ -176,7 +176,8 @@ namespace Foundry
                 if (mindfulness > 1) {
                     mindfulness = 0.0;
                 }
-                mindfulness += 0.00005;
+                mindfulness += 0.0005;
+                //mindfulness = 1;
                 Debug.Log("Mindfulness: " + mindfulness); // print mindfulness level
 
                 onMindfulnessChange.Invoke(mindfulness); 
