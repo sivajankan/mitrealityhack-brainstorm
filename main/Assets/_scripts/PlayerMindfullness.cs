@@ -16,7 +16,7 @@ namespace Foundry
         //public UnityEvent<string> onValueChange;
 
         public float mindfullness = 0f;
-        public float restlessness = 0f;
+        // public float restlessness = 0f;
 
         void Start()
         {
@@ -28,13 +28,19 @@ namespace Foundry
             if (stream.IsWriting)
             {
                 stream.SendNext(mindfullness);
-                stream.SendNext(restlessness);
+                // stream.SendNext(restlessness);
             }
             else
             {
                 mindfullness = (float)stream.ReceiveNext();
-                restlessness = (float)stream.ReceiveNext();
+                // restlessness = (float)stream.ReceiveNext();
             }
+        }
+
+        public void updateMindfulness(double mindfulness)
+        {
+            this.mindfullness =  (float)mindfulness;
+            Debug.Log("Recieved mindfulness value in Player componenet");
         }
 
         //public void Increment(InputAction.CallbackContext ctx)

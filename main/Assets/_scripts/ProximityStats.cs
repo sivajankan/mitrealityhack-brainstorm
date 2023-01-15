@@ -30,11 +30,11 @@ namespace Foundry
                     var distanceAway = Vector3.Distance(playerPos, myPos);
                     var stats = v.GetComponent<PlayerMindfullness>();
                     var mindfullness = stats.mindfullness;
-                    var restlessness = stats.restlessness;
+                    // var restlessness = stats.restlessness;
 
                     // TODO: Do our compute here
                     Debug.Log($"transform {transform}, distance away {distanceAway}");
-                    Debug.Log($"mind: {mindfullness} | rest: {restlessness}");
+                    Debug.Log($"mind: {mindfullness}");
                 };
             }
         }

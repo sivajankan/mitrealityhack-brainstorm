@@ -2395,7 +2395,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mindfullness: 0
-  restlessness: 0
 --- !u!1 &2101046762834117021
 GameObject:
   m_ObjectHideFlags: 0

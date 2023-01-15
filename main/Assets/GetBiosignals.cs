@@ -21,8 +21,8 @@ namespace Foundry
         // private MLModel mindfulness = null;
         // private MLModel restfulness = null;
 
+        private bool PPG = false;
         // private bool PPG = true;
-        private bool PPG = true;
         private double[] mf_coef = {2.6338144674136394,4.006742906593334,-34.51389221061297,1.1950604401540308,35.78022137767881};
         private double mindfulness_intercept = 0.364078;
         
@@ -156,7 +156,7 @@ namespace Foundry
 
             // prepare feature vector
             Tuple<double[], double[]> bands = DataFilter.get_avg_band_powers(data, eeg_channels, sampling_rate, true);
-            Debug.Log($"bands.Item1: {String.Join(",", bands.Item1)}");
+            // Debug.Log($"bands.Item1: {String.Join(",", bands.Item1)}");
             
             double[] feature_vector = bands.Item1;
 
@@ -167,9 +167,11 @@ namespace Foundry
                 value += feature_vector[i] * mf_coef[i];
             }
             mindfulness = 1.0 / (1.0 + Mathf.Exp((float)-1.0*((float)mindfulness_intercept + (float)value)));
-            onMindfulnessChange.Invoke(mindfulness);
 
             Debug.Log("Mindfulness: " + mindfulness); // print mindfulness level
+
+            onMindfulnessChange.Invoke(mindfulness);
+
         }
 
         // you need to call release_session and ensure that all resources correctly released
