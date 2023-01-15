@@ -58,6 +58,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: -1717681066079957684}
+  - {fileID: 842885459976912504}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -137,7 +138,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animal: {fileID: 6157240613305378499}
-  movingSpeed: 1
+  movingSpeed: 3
+  radius: 4
+  poll: 1
+  isRun: 1
 --- !u!114 &-1717681066079957684
 MonoBehaviour:
   m_ObjectHideFlags: 0
