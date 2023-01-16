@@ -15,6 +15,9 @@ namespace Foundry
         public float dropOffStart = 3f;
         public float dropOffEnd = 10f;
 
+        private float degradeSpeed = 0.01f;
+
+
         // Start is called before the first frame update
         void Start()
         {
@@ -25,28 +28,22 @@ namespace Foundry
         {
             if (managers.players?.Count > 0)
             {
-                // so here we are getting the distance between player and animals
-                foreach (var v in managers.players.Values.ToArray())
+                var PlayerMindfulnessInArea = managers.players.Values
+                    .Select(CalculateMindfulness)
+                    .Where(v => v > 0);
+
+                // Maybe good to setup a enum state here...
+                if (PlayerMindfulnessInArea.Any())
                 {
-                    var playerPos = v.transform.position;
-                    var myPos = transform.position;
+                    mindfullness = PlayerMindfulnessInArea.Average();
+                }
+                else
+                {
+                    // degrade mindfulness
+                    mindfullness -= degradeSpeed * Time.deltaTime;
+                }
 
-                    playerPos.y = 0;
-                    myPos.y = 0;
-                    var distanceAway = Vector3.Distance(playerPos, myPos);
-
-                    if (distanceAway > this.dropOffEnd) return; 
-                    
-                    var stats = v.GetComponent<PlayerMindfullness>();
-                    mindfullness = stats.mindfullness
-                        * (this.dropOffEnd - distanceAway) / (this.dropOffEnd - dropOffStart);
-
-                    // TODO: Do our compute here
-                    onMindfulnessChange.Invoke(mindfullness);
-
-                    Debug.Log($"transform {transform}, distance away {distanceAway}");
-                    Debug.Log($"mind: {mindfullness}");
-                };
+                onMindfulnessChange.Invoke(mindfullness);
             }
         }
 
@@ -60,6 +57,24 @@ namespace Foundry
             {
                 mindfullness = (float)stream.ReceiveNext();
             }
+        }
+
+        private float CalculateMindfulness(GameObject v)
+        {
+            var playerPos = v.transform.position;
+            var myPos = transform.position;
+            playerPos.y = 0;
+            myPos.y = 0;
+            var distanceAway = Vector3.Distance(playerPos, myPos);
+            var stats = v.GetComponent<PlayerMindfullness>();
+
+            if (distanceAway > dropOffEnd) return -1;
+
+            Debug.Log($"transform {transform}, distance away {distanceAway}");
+            Debug.Log($"mind: {mindfullness}");
+
+            return stats.mindfullness
+                * (this.dropOffEnd - distanceAway) / (this.dropOffEnd - dropOffStart);
         }
     }
 }
