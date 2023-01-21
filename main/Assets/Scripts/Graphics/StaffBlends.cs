@@ -70,7 +70,7 @@ namespace Foundry
         //This function will remap the brainInput float to a value between 0 and 100
         public void RemapBrainInput(float input)
         {
-            brainInputRemaped = input * 100f;
+            //brainInputRemaped = input * 100f;
 
             //If the input is bigger than 0.5 then you want 0 to 100 based off of 1-0.5
             if (input > .5f)

@@ -15,14 +15,14 @@ namespace Foundry
         [SerializeField] private float targetEarBlend;
         [SerializeField] private float earBlendSpeed = 0.1f;
         private int earBlendIndex = 0;
-        
+
         SkinnedMeshRenderer bunnyEarOneRenderer;
         SkinnedMeshRenderer bunnyEarTwoRenderer;
         // Start is called before the first frame update
         void Start()
         {
-        bunnyEarOneRenderer = bunnyEarOne.GetComponent<SkinnedMeshRenderer>();
-        bunnyEarTwoRenderer = bunnyEarTwo.GetComponent<SkinnedMeshRenderer>();
+            bunnyEarOneRenderer = bunnyEarOne.GetComponent<SkinnedMeshRenderer>();
+            bunnyEarTwoRenderer = bunnyEarTwo.GetComponent<SkinnedMeshRenderer>();
         }
 
         // Update is called once per frame
@@ -37,13 +37,14 @@ namespace Foundry
                     //increase the current blend
                     currentEarBlend += earBlendSpeed * Time.deltaTime;
                     //if the current blend is greater than the target blend
-                } else if (currentEarBlend > targetEarBlend)
+                }
+                else if (currentEarBlend > targetEarBlend)
                 {
-                    LerpBunnyEars(earBlendIndex,currentEarBlend, targetEarBlend);
+                    LerpBunnyEars(earBlendIndex, currentEarBlend, targetEarBlend);
                 }
             }
         }
-        
+
         //This function starts the animation controller transition when when "ConvertToEars" trigger is called
         public void ConvertToEars()
         {
@@ -53,14 +54,14 @@ namespace Foundry
             earBlendIndex = 0;
 
         }
-        
+
         //This function starts the animation controller transition when when "ConvertToBunny" trigger is called
         public void ConvertToBunny()
         {
             GetComponent<Animator>().SetTrigger("ConvertToBunny");
             earBlendIndex = 1;
         }
-        
+
         //lerp the blend shape weight of the bunny ears
         public void LerpBunnyEars(int index, float curBlend, float targetBlend)
         {
@@ -68,6 +69,5 @@ namespace Foundry
             bunnyEarOneRenderer.SetBlendShapeWeight(index, currentEarBlend);
             bunnyEarTwoRenderer.SetBlendShapeWeight(index, currentEarBlend);
         }
-        
     }
 }

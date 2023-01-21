@@ -12,11 +12,12 @@ namespace Foundry
         public float mindfullness = 0.5f;
         public AnimalMove move;
         public AudioSource audioSource;
+        public Animator animator;
+
+        public bool isSuperMindful = false;
 
         public void start()
         {
-            //this.move = this.GetComponent<AnimalMove>();
-            //this.audioSource = this.GetComponent<AudioSource>();
         }
 
         public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -34,13 +35,13 @@ namespace Foundry
         public void OnAnimalHit(float mindfullness){
             this.mindfullness = mindfullness;
             this.move.transition(1.5f, 0f);
-            this.audioSource.Play();
         }
 
         // Start is called before the first frame update
         void Start()
         {
-            this.photonView.ObservedComponents.Add(this);
+            photonView.ObservedComponents.Add(this);
+            photonView.RPC(nameof(HitSound), RpcTarget.All);
         }
 
         // Update is called once per frame
@@ -50,11 +51,28 @@ namespace Foundry
             if (this.mindfullness > 0.5)
             {
                 this.mindfullness -= this.deteriateRate * Time.deltaTime;
+
+                if (this.mindfullness > 0.8 && !this.isSuperMindful)
+                {
+                    this.isSuperMindful = true;
+                    //this.animator.SetTrigger("ConvertToEars");
+                }
+                else if (this.mindfullness < 0.8 && this.isSuperMindful)
+                {
+                    this.isSuperMindful = false;
+                    //this.animator.SetTrigger("ConvertToBunny");
+                }
             }
             else
             {
                 this.mindfullness += this.deteriateRate * Time.deltaTime;
             }
+        }
+
+        [PunRPC]
+        public void HitSound()
+        {
+            this.audioSource.Play();
         }
     }
 }

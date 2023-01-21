@@ -311,6 +311,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6519260940491687492}
     m_Modifications:
+    - target: {fileID: 1519893120579798565, guid: 389fca3f241f0b14286762c383ee6fdd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7372846740771676203, guid: 389fca3f241f0b14286762c383ee6fdd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -359,9 +363,55 @@ PrefabInstance:
       propertyPath: m_Name
       value: BunnyTwo
       objectReference: {fileID: 0}
+    - target: {fileID: 7988863393383979466, guid: 389fca3f241f0b14286762c383ee6fdd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 594595553324046838, guid: 389fca3f241f0b14286762c383ee6fdd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 389fca3f241f0b14286762c383ee6fdd, type: 3}
+--- !u!1 &3860848014949191516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7988863393383979466, guid: 389fca3f241f0b14286762c383ee6fdd, type: 3}
+  m_PrefabInstance: {fileID: 6578167227681838742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &604072955393465224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3860848014949191516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cda1fb3fd9539c49b8ec60bb696f267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bunnyEarOne: {fileID: 3860848014949191516}
+  bunnyEarTwo: {fileID: 0}
+  currentEarBlend: 0
+  targetEarBlend: 0
+  earBlendSpeed: 0.1
+--- !u!95 &2944936663675267700
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3860848014949191516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &3913651840284126215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7861681452032195217, guid: 389fca3f241f0b14286762c383ee6fdd, type: 3}

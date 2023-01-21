@@ -13,10 +13,6 @@ namespace Foundry
 
         private Vector3 start;
 
-        private float speed;
-        //private float xDirection = 1f;
-        //private float zDirection = 1f;
-
         public float poll = 1f;
         private float timePass = 0f;
 
@@ -45,6 +41,9 @@ namespace Foundry
 
         void loop()
         {
+            // reason why animal is going crazy:
+            // many client is doing the same calculation,
+            // so animal end up rotating very fast
             timePass += Time.deltaTime;
             if (timePass > poll)
             {
@@ -58,12 +57,9 @@ namespace Foundry
 
                 if (currentDistance > radius)
                 {
-                    //transform.
-                    this.transform.Rotate(0.0f, UnityEngine.Random.Range(30, 120), 0.0f);
-
+                    transform.Rotate(0.0f, UnityEngine.Random.Range(90, 270), 0.0f);
                 }
                 transform.position += transform.forward * movingSpeed * Time.deltaTime;
-                //transform.position = new Vector3(xPos, yPos, zPos);
             } else {
                 
             }
